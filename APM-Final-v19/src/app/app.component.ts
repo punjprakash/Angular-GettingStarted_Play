@@ -17,7 +17,6 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
     </div>
     `,
     styleUrls: ['./app.component.css'],
-    standalone: true,
     imports: [RouterLinkActive, RouterLink, RouterOutlet]
 })
 export class AppComponent {
