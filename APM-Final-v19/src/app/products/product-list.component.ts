@@ -11,10 +11,12 @@ import { FormsModule } from "@angular/forms";
 @Component({
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css'],
+    standalone: true,
     imports: [FormsModule, NgIf, NgFor,
         RouterLink, StarComponent, LowerCasePipe,
         CurrencyPipe, ConvertToSpacesPipe]
 })
+
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle = 'Product List';
   imageWidth = 50;
