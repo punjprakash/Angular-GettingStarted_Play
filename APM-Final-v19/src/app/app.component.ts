@@ -5,7 +5,7 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
     selector: 'pm-root',
     template: `
     <nav class='navbar navbar-expand navbar-light bg-light'>
-        <a class='navbar-brand'>{{pageTitle}}</a>
+        <a class='navbar-brand'></a>
         <ul class='nav nav-pills'>
           <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Home</a></li>
           <li><a class='nav-link' routerLinkActive='active' routerLink='/products'>Product List</a></li>
@@ -21,5 +21,8 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
     imports: [RouterLinkActive, RouterLink, RouterOutlet]
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   pageTitle = 'Acme Product Management';
 }
