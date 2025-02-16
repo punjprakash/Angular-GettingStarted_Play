@@ -11,17 +11,29 @@ export class ProductService {
   // If using Stackblitz, replace the url with this line
   // because Stackblitz can't find the api folder.
   // private productUrl = 'assets/products/products.json';
-  private productUrl = 'http://localhost:8080/api/products';
+  private productUrl = 'http://localhost:8080/service/newproducts';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    console.log('ProductService instantiated');
+  }
 
   getProducts(): Observable<IProduct[]> {
+    const startTime= Date.now();
     return this.http.get<IProduct[]>(
       this.productUrl)
       .pipe(
-        tap(data => console.log('All: ', JSON.stringify(data))),
+        tap({
+          next: data => {
+             const elapsedTime = new Date().getTime() - startTime;
+             console.log(this.productUrl);
+              console.log(`Elapsed Time: ${elapsedTime} ms`);
+              console.log('All: ', JSON.stringify(data))
+            },
+            error: error => {console.error('Error: ', error)},
+            complete: () => {console.log('Completed')}
+          }),
         catchError(this.handleError)
-      );
+      )
   }
 
   // Get one product

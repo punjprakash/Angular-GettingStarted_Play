@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
 
+
 @Component({
     selector: 'pm-root',
     template: `
@@ -9,6 +10,7 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
         <ul class='nav nav-pills'>
           <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Home</a></li>
           <li><a class='nav-link' routerLinkActive='active' routerLink='/products'>Product List</a></li>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/newproducts'>New Product List</a></li>
           <li><a class='nav-link' routerLinkActive='active' routerLink='/about'>About</a></li>
         </ul>
     </nav>
@@ -18,7 +20,10 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
     `,
     standalone: true,
     styleUrls: ['./app.component.css'],
-    imports: [RouterLinkActive, RouterLink, RouterOutlet]
+    imports: [RouterLinkActive,
+      RouterLink,
+      RouterOutlet
+     ]
 })
 export class AppComponent {
   title(title: any) {

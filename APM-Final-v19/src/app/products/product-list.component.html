@@ -9,6 +9,8 @@
         <input type='text'
                (input)='onFilterChange($any($event.target).value)'
                [value] = 'listFilter()' />
+        <!-- <input type='text' [(ngModel)]="listFilter" /> -->
+
       </div>
     </div>
     <div class='row'

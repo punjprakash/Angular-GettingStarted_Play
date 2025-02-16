@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, computed, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, computed, signal } from "@angular/core";
 import { Subscription } from "rxjs";
 import { IProduct } from "./product";
 import { ProductService } from "./product.service";
@@ -27,7 +27,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   // Use the new Angular signals feature to perform the filter
   listFilter = signal('');
-  filteredProducts = computed(() => this.performFilter(this.listFilter()));
+  filteredProducts = computed( ()=> this.performFilter(this.listFilter()));
   products: IProduct[] = [];
 
   constructor(private productService: ProductService) {}
