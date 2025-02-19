@@ -13,6 +13,11 @@ export const routes: Routes = [
     loadComponent: () => import('./newproducts/product-list.component').then(c => c.ProductListComponent)
   },
   {
+    path: 'submitForm',
+    loadComponent: () => import('./submitform/submitform.component').then(c => c.SubmitformComponent)
+
+  },
+  {
     path: 'about',
     loadComponent: () => import('./about/about.component').then(c => c.AboutComponent)
   },

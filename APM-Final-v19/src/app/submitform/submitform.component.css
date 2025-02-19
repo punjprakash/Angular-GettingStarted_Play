@@ -1,0 +1,5 @@
+
+.full-height {
+  height: 50vh; /* Makes the container take full screen height */
+  background-color: rgb(148, 190, 203);
+}
