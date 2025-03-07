@@ -8,7 +8,7 @@ import { NgIf, LowerCasePipe, CurrencyPipe } from '@angular/common';
 
 @Component({
     templateUrl: './product-detail.component.html',
-    styleUrls: ['./product-detail.component.css'],
+    styleUrls: ['./product-detail.component.scss'],
     standalone:true,
     imports: [NgIf, StarComponent, LowerCasePipe, CurrencyPipe, ConvertToSpacesPipe]
 })

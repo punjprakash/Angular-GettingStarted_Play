@@ -5,7 +5,7 @@ import { RouterLinkActive, RouterLink, RouterOutlet } from "@angular/router";
 @Component({
     selector: 'pm-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
+    styleUrls: ['./app.component.scss'],
     standalone: true,
     imports: [RouterLinkActive,
       RouterLink,

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './submitform.component.html',
-  styleUrl: './submitform.component.css'
+  styleUrl: './submitform.component.scss'
 })
 export class SubmitformComponent {
 constructor() { }
