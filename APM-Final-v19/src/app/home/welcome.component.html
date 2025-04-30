@@ -1,14 +1,24 @@
-﻿<div class="card">
-  <div class="card-header">
-    {{pageTitle}}
-  </div>
-  <div class="card-body">
-    <div class="container-fluid">
-      <div class="text-center">
-        <img src="./assets/images/logo.webp"
-             class="img-responsive"
-             style="width:50%;padding-bottom:50px" />
-            </div>
+﻿<!-- welcome.component.html -->
+ <main>
+  <div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+    <div class="card-body">
+      <div class="container-fluid">
+        <!-- Main logo - priority loading -->
+        <div class="text-center mb-5">
+          <img
+            ngSrc="./assets/images/logo.webp"
+            width="400"
+            height="700"
+            class="img-responsive"
+            alt="Moments Ecommerce Logo" />
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <app-image-gallery></app-image-gallery>
+</main>
+
+

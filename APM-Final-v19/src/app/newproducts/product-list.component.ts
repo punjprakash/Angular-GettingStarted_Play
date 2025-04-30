@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { BehaviorSubject, catchError, combineLatest, EMPTY, map, Subject } from 'rxjs';
 
 import { ProductCategoryService } from '../product-categories/product-category.service';
@@ -16,6 +16,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 })
 export class ProductListComponent {
+  // some dummy properties to show how to use the async pipe
+  name: string = 'Kiaan';
+  last: string = 'Singh';
+  @HostBinding('debugdata') data: string = 'Kiaan';
+
+  // get dataName(): string {
+  //   return this.name;
+  // }
+  // @HostBinding('attr.data-last')
+  // get dataLast(): string {
+  //   return this.last;
+  // }
 
   constructor(private newProductService: ProductServiceNew,
     private productCategoryService: ProductCategoryService) { }
